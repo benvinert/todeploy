@@ -31,6 +31,7 @@ urlpatterns = [
     ################ADMIN###################
     path('Admin/sendEmail',views.sendEmailAllUsers,name="sendEmailAllUsers"),
     path('Admin/getAllUsers',views.getAllUsers,name="getAllUsers"),
-    path('scrapNewData',views.startScrapingRotation,name="scrapNewData")
+    path('scrapNewData',views.startScrapingRotation,name="scrapNewData"),
+    path('check',views.check,name="check")
 
 ]
