@@ -74,6 +74,9 @@ def editPost(request):
     except:
         response = HttpResponse(status=500)
     return response
+
+def check(request):
+    return JsonResponse({"check" : "success"})
         
 
     
