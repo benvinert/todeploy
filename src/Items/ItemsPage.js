@@ -92,12 +92,14 @@ export default function Shoes()
             try{
                 await fetch(URL).then((resp) => resp.json()).then((jsonReponse) => {
                     setLoading(false);
+                    console.log("JSON RESP:::" , jsonReponse)
                     setAllitems(jsonReponse);// set Items
                     setShowItems(jsonReponse)
                     setFilterState({maxPrice : jsonReponse.maxPrice , minPrice : jsonReponse.minPrice,colours : "" , size : ""})
                 })
             }catch(e)
             {
+                console.log("yey")
                 push("/errorpage")
                 console.log("Server is down.")
             }
