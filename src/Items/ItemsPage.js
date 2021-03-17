@@ -127,6 +127,7 @@ export default function Shoes()
                     return response.json()
                 }
                 ).then((resp_json) => {
+                    console.log("JSON RESP:::" , resp_json)
                     setLoading(false);
                     setAllitems(resp_json);// set Items
                     setShowItems(resp_json)
@@ -134,6 +135,7 @@ export default function Shoes()
                 })
             }catch(e)
             {
+                console.log("yey")
                 push("/errorpage")
                 console.log("Server is down.")
             }
