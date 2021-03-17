@@ -1,1 +1,1 @@
-web: gunicorn vinerfia_Project/vinerfia_Project.wsgi --log-file -
+web: gunicorn vinerfia_Project.vinerfia_Project.wsgi --log-file -
