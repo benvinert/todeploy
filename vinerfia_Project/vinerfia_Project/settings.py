@@ -14,7 +14,7 @@ from pathlib import Path
 from datetime import timedelta
 import os
 import django
-
+import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django-heroku',
     'djoser',
     'UserAuth',
     'vinerfiav1.apps.Vinerfiav1Config',
@@ -185,3 +186,4 @@ DJOSER = {
 }
 
 django.setup()
+django_heroku.settings(locals())
