@@ -99,7 +99,7 @@ export default function Shoes()
                 })
             }catch(e)
             {
-                console.log("yey")
+                console.log("noooooooooooooooooo")
                 push("/errorpage")
                 console.log("Server is down.")
             }
