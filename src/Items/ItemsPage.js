@@ -124,6 +124,7 @@ export default function Shoes()
             try{
                 await fetch(URL).then((response) =>
                 {
+                    console.log("Server RESPONSEEEEEE" , response)
                     return response.json()
                 }
                 ).then((resp_json) => {
