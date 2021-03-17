@@ -88,7 +88,7 @@ export default function Shoes()
             let searchparamJson = JSON.parse(searchparam)
             setLocState(searchparamJson)
             let queryParams = serializeAllQuerySearchParams(searchparamJson)
-            let URL = `/api/All/searchItem/params=${JSON.stringify(queryParams)}`
+            let URL = `https://ben-ecommerce.herokuapp.com/api/All/searchItem/params=${JSON.stringify(queryParams)}`
             try{
                 await fetch(URL).then((resp) => resp.json()).then((jsonReponse) => {
                     setLoading(false);
