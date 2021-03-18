@@ -10,7 +10,7 @@ from django.http import HttpResponse
 from pymongo import MongoClient
 from typing import Union
 
-client = MongoClient('localhost', 27017)
+client = MongoClient("mongodb+srv://benvinerttt:ab0548112@benproject.fzbf4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 DATABASE = client["Posts"]
 PostsCollection = DATABASE['Posts']
 
