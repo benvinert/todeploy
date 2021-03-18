@@ -154,9 +154,9 @@ USE_TZ = True
 
 CORS_ORIGIN_WHITELIST = [
     "https://example.com",
-    "https://front-ben-ecommerce.herokuapp.com",
-    "http://localhost:8080",
-    "http://localhost:3000",
+    "front-ben-ecommerce.herokuapp.com",
+    "localhost:8080",
+    "localhost:3000",
     "http://127.0.0.1:9000"
 ]
 
