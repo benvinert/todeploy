@@ -152,7 +152,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-CORS_ALLOWED_ORIGINS = [
+CORS_ORIGIN_WHITELIST = [
     "https://example.com",
     "https://front-ben-ecommerce.herokuapp.com",
     "http://localhost:8080",
