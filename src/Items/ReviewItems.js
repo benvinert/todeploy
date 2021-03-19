@@ -51,9 +51,9 @@ export const ReviewItems = ({itemDetails,postContent,userPostLoading,sendPost}) 
                     </Button>
                     </div>
             }
-            return <Button style={{marginTop : '0.8rem'}} variant='contained' color='primary' onClick={() => sendPost("addPost")}>
+            return User.isAuthenticated ? <Button style={{marginTop : '0.8rem'}} variant='contained' color='primary' onClick={() => sendPost("addPost")}>
                     POST
-                    </Button>
+                    </Button> : null
             
         }
     }
@@ -86,7 +86,7 @@ export const ReviewItems = ({itemDetails,postContent,userPostLoading,sendPost}) 
     <Grid item xl={2} md={2} sm={2} xs={2} ></Grid>
     <Grid item xl={7} md={7} sm={7} xs={7}>
     <h2 id="UserPost">Customer Review</h2>
-        <UserWritePostComp/>
+        {User.isAuthenticated ? <UserWritePostComp/> : null}
         {itemDetails.postsProduct.length == 0 && <h3>Empty</h3>}
         {itemDetails.postsProduct.map((eachPost,index) => 
         <Grid container spacing={1}>
