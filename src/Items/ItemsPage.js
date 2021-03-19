@@ -90,10 +90,8 @@ export default function Shoes()
             let queryParams = serializeAllQuerySearchParams(searchparamJson)
             URL += `/searchItem/params=${JSON.stringify(queryParams)}`
             try{
-                console.log("THE URL IS::" , URL);
                 await fetch(URL).then((resp) => resp.json()).then((jsonReponse) => {
                     setLoading(false);
-                    console.log("JSON RESP:::" , jsonReponse)
                     setAllitems(jsonReponse);// set Items
                     setShowItems(jsonReponse)
                     setFilterState({maxPrice : jsonReponse.maxPrice , minPrice : jsonReponse.minPrice,colours : "" , size : ""})
@@ -122,14 +120,11 @@ export default function Shoes()
                 URL += `/kids_gender=${kids_gender}/style=${style}/category=${cat}`
             }
             try{
-                console.log("THE URL IS::" , URL);
                 await fetch(URL).then((response) =>
                 {
-                    console.log("Server RESPONSEEEEEE" , response)
                     return response.json()
                 }
                 ).then((resp_json) => {
-                    console.log("JSON RESP:::" , resp_json)
                     setLoading(false);
                     setAllitems(resp_json);// set Items
                     setShowItems(resp_json)
@@ -137,7 +132,6 @@ export default function Shoes()
                 })
             }catch(e)
             {
-                console.log("yey")
                 push("/errorpage")
                 console.log("Server is down.")
             }

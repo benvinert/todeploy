@@ -39,7 +39,7 @@ const InItemPage = (props) =>
     {
         try
         {
-            await fetch(`api/All/getItemById/product_code=${product_code}`)
+            await fetch(`https://backend-ben-ecommerce.herokuapp.com/api/All/getItemById/product_code=${product_code}`)
             .then((response) => response.json())
             .then((response_json) => {console.log(response_json) ; setItemDetails({...response_json,idex : idex})})
         }
@@ -163,7 +163,7 @@ const InItemPage = (props) =>
         console.log("sended Payload :: " , payload,"POSTIDD::" , postId)
         try
         {
-        await fetch(`api/All/${whichOperator}`,{
+        await fetch(`https://backend-ben-ecommerce.herokuapp.com/api/All/${whichOperator}`,{
             method: method, // *GET, POST, PUT, DELETE, etc.
             mode: 'cors', // no-cors, *cors, same-origin
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
