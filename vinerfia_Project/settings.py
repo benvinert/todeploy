@@ -152,14 +152,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-CORS_ORIGIN_WHITELIST = [
-    "https://example.com",
-    "front-ben-ecommerce.herokuapp.com",
-    "http://localhost:3000/",
-    "localhost:8080",
-    "localhost:3000",
-    "http://127.0.0.1:9000"
-]
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
