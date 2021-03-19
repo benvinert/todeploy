@@ -90,7 +90,7 @@ export default function Shoes()
             let queryParams = serializeAllQuerySearchParams(searchparamJson)
             URL += `/searchItem/params=${JSON.stringify(queryParams)}`
             try{
-                consle.log("THE URL IS::" , URL);
+                console.log("THE URL IS::" , URL);
                 await fetch(URL).then((resp) => resp.json()).then((jsonReponse) => {
                     setLoading(false);
                     console.log("JSON RESP:::" , jsonReponse)
@@ -122,7 +122,7 @@ export default function Shoes()
                 URL += `/kids_gender=${kids_gender}/style=${style}/category=${cat}`
             }
             try{
-                consle.log("THE URL IS::" , URL);
+                console.log("THE URL IS::" , URL);
                 await fetch(URL).then((response) =>
                 {
                     console.log("Server RESPONSEEEEEE" , response)
