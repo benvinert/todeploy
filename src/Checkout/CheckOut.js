@@ -34,7 +34,7 @@ const CheckOut = () =>
         try
         {       
             let token = localStorage.getItem("access")
-            await fetch("/api/All/addtohistoryorders", {
+            await fetch("https://backend-ben-ecommerce.herokuapp.com/api/All/addtohistoryorders", {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             mode: 'cors', // no-cors, *cors, same-origin
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached

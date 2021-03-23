@@ -26,7 +26,7 @@ export const AdminSendEmail = () =>
         var payload = {'from' : User.name , 'message' : message.current['Message'].value,"to" : selectionModel}
         try
         {
-            await fetch("api/Admin/sendEmail",{
+            await fetch("https://backend-ben-ecommerce.herokuapp.com/api/Admin/sendEmail",{
                 method : "POST",
                 mode: 'cors', // no-cors, *cors, same-origin
                 cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached

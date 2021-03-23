@@ -13,7 +13,7 @@ export default function ActivateAccount()
             token : token
         }
 
-        const req = await fetch("/auth/users/activation/",{
+        const req = await fetch("https://backend-ben-ecommerce.herokuapp.com/auth/users/activation/",{
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached

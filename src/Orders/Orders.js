@@ -12,7 +12,7 @@ export const Orders = () =>
     const getOrders = async() =>
     {
         let token = localStorage.getItem("access")
-        await fetch(`api/All/getOrdersByEmail/email=${User.email}`,{
+        await fetch(`https://backend-ben-ecommerce.herokuapp.com/api/All/getOrdersByEmail/email=${User.email}`,{
             method: 'GET', // *GET, POST, PUT, DELETE, etc.
             mode: 'cors', // no-cors, *cors, same-origin
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached

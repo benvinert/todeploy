@@ -34,7 +34,7 @@ export const SeeOrder = () =>
     const getOrderById = async() => 
     {
         let token = localStorage.getItem("access")
-        await fetch(`api/All/getOneOrderByOrderNumber/orderNumber=${orderid}`,{
+        await fetch(`https://backend-ben-ecommerce.herokuapp.com/api/All/getOneOrderByOrderNumber/orderNumber=${orderid}`,{
             method: 'GET', // *GET, POST, PUT, DELETE, etc.
             mode: 'cors', // no-cors, *cors, same-origin
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
