@@ -6,6 +6,24 @@ export default function Layout()
 {
     const {User , setUser } = useContext(UserContext);
 
+
+    const loadUser = async(user_access) => {
+      localStorage.setItem("access",user_access)
+      const req = await fetch("/auth/users/me",{
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        mode: 'cors', // no-cors, *cors, same-origin
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: 'same-origin', // include, *same-origin, omit
+        headers : {
+          'Content-Type' : 'application/json',
+          'Authorization' : "JWT " + user_access
+        }
+      })
+      .then((resp) => resp.json())
+      .then((resp_json) => setUser((prevState) => {return {...prevState,name : resp_json.name,isAuthenticated : true,email : resp_json.email,is_staff : resp_json.is_staff}}))
+      
+    }
+
     useEffect(async() => {
         let token = localStorage.getItem("access")
         if(token){
