@@ -145,6 +145,7 @@ def getItemsFromProSide(request,**kwargs):
     """
     listResults = []
     print(kwargs)
+    print("KWAGS YESSS")
     #if its "All" so it's give me all clothing
     if(kwargs['gender'] == "kids"):
         if(kwargs['category'] == "All"):

@@ -36,9 +36,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static_collected")
 SECRET_KEY = 'dh5+sfb$ae*fp8m7bbw3pqx=1s70f)ma=uq#ebe_9zxt2&9&v^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ["127.0.0.1","ben-ecommerce.herokuapp.com"]
+DEBUG = True
+##"127.0.0.1","backend-ben-ecommerce.herokuapp.com","front-ben-ecommerce.herokuapp.com,http://localhost:3000"
+ALLOWED_HOSTS = ['*',"https://front-ben-ecommerce.herokuapp.com"]
 
 
 # Application definition
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'rest_framework',
     'djoser',
     'UserAuth',
@@ -57,14 +58,32 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+<<<<<<< HEAD
+=======
+    'corsheaders.middleware.CorsMiddleware',
+>>>>>>> 70c0d9b514d7eb06be2ce7d38bbdfb94a4429821
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True  # allows all 
+# or use whitelist:
+# CORS_ORIGIN_WHITELIST = (
+#     'localhost:3000',
+#     'https://front-ben-ecommerce.herokuapp.com',
+#     'http://localhost:3000',
+#     '127.0.0.1'
+# )
+
+
+
+
 
 ROOT_URLCONF = 'vinerfia_Project.urls'
 
@@ -94,10 +113,14 @@ DATABASES = {
         'NAME': 'vinerfia',
         'HOST' : 'localhost',
         'USER' : 'root',
-        'PASSWORD' :'0548112'
-        
-        
+        'PASSWORD' :'0548112' 
     }}
+
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -144,7 +167,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 
 
