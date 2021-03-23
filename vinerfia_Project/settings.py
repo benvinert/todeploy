@@ -36,7 +36,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static_collected")
 SECRET_KEY = 'dh5+sfb$ae*fp8m7bbw3pqx=1s70f)ma=uq#ebe_9zxt2&9&v^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ##"127.0.0.1","backend-ben-ecommerce.herokuapp.com","front-ben-ecommerce.herokuapp.com,http://localhost:3000"
 ALLOWED_HOSTS = ['*',"https://front-ben-ecommerce.herokuapp.com"]
 
