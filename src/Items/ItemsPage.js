@@ -82,7 +82,7 @@ export default function Shoes()
     const getItems = async() => 
     {
         
-        let URL = `https://backend-ben-ecommerce.herokuapp.com/api/All`
+        let URL = `/api/All`
         if(searchparam)
         {
             let searchparamJson = JSON.parse(searchparam)
