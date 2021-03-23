@@ -101,7 +101,7 @@ export default function Register() {
     if(data.password == data.re_password)
     {
       User = JSON.stringify(data);
-      const response = await fetch("https://backend-ben-ecommerce.herokuapp.com/api/All/auth/users/", {
+      const response = await fetch("https://backend-ben-ecommerce.herokuapp.com/auth/users/", {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
