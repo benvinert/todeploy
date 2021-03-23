@@ -171,7 +171,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-AUTH_USER_MODEL = "UserAuth..models.UserAccount"
+AUTH_USER_MODEL = "UserAuth.UserAccount"
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSIO_CLASSES' : [
