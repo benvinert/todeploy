@@ -80,7 +80,7 @@ export default function SignIn() {
       password : data.password
     }
     // Create JWT token and given it to user on LocalStorage
-    const req = await fetch("auth/jwt/create/",
+    const req = await fetch("https://backend-ben-ecommerce.herokuapp.com/auth/jwt/create/",
     {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
