@@ -26,7 +26,6 @@ def sendEmailAllUsers(request):
 
     """
     src = request.data['from']
-
     dest = request.data['to']
     message = request.data['message']
     htmly = get_template('email.html').render({"message" : message,"from" : src})

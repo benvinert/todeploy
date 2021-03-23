@@ -9,6 +9,9 @@ from rest_framework.permissions import AllowAny,IsAuthenticated,IsAdminUser
 from djoser.compat import get_user_email
 from djoser.conf import settings
 from typing import Union
+from django.core.mail import EmailMultiAlternatives,get_connection
+from django.template.loader import get_template
+from vinerfia_Project.settings import EMAIL_HOST_USER
 
 
 def sendEmailOrder(request):
@@ -23,13 +26,22 @@ def sendEmailOrder(request):
     
     None
     """
-
+    
     user = UserAccount.objects.get(email=request.data['email'])
+    dest_email = [get_user_email(user)]
     print(user)
-    if settings.SEND_ACTIVATION_EMAIL:
-        context = request.data
-        to = [get_user_email(user)]
-        settings.EMAIL.order_information(request, context).send(to)
+    htmly = get_template('order_information.html').render(request.data)
+    message = EmailMultiAlternatives(to=dest_email,from_email=EMAIL_HOST_USER)
+    message.attach_alternative(htmly, "text/html")
+    message.send()
+
+
+    # user = UserAccount.objects.get(email=request.data['email'])
+    # print(user)
+    # if settings.SEND_ACTIVATION_EMAIL:
+    #     context = request.data
+    #     to = [get_user_email(user)]
+    #     settings.EMAIL.order_information(request, context).send(to)
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
