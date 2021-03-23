@@ -11,7 +11,7 @@ export default function Layout()
         if(token){
         const req = await fetch("https://backend-ben-ecommerce.herokuapp.com/auth/jwt/verify/",
         {
-          method: 'GET', // *GET, POST, PUT, DELETE, etc.
+          method: 'POST', // *GET, POST, PUT, DELETE, etc.
           mode: 'cors', // no-cors, *cors, same-origin
           cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
           credentials: 'same-origin', // include, *same-origin, omit
