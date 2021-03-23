@@ -23,7 +23,7 @@ export default function Layout()
           body: JSON.stringify({"token" : token}) }) // body data type must match "Content-Type" header
           .then(resp => resp.status == 200 ? loadUser(token) : console.log("Verify JWT not works FINE :)))))))"))
         }else{
-            console.log("You Dont have User")
+            console.log("You D'ont have User")
         }
     }, [])
 
