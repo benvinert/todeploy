@@ -71,12 +71,12 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_ALLOW_ALL = True  # allows all 
 # or use whitelist:
-CORS_ORIGIN_WHITELIST = (
-    'localhost:3000',
-    'https://front-ben-ecommerce.herokuapp.com',
-    'http://localhost:3000',
-    '127.0.0.1'
-)
+# CORS_ORIGIN_WHITELIST = (
+#     'localhost:3000',
+#     'https://front-ben-ecommerce.herokuapp.com',
+#     'http://localhost:3000',
+#     '127.0.0.1'
+# )
 
 
 
