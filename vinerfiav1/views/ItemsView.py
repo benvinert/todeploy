@@ -12,11 +12,12 @@ from ..serializers import *
 from ..models import *
 from django.views.decorators.cache import cache_page
 from django.forms.models import model_to_dict
-import scrapy
-from scrapy.crawler import CrawlerProcess,CrawlerRunner
 from mySpiders.moshe.spiders import nikescrapy,adidasscrapy,nikescrapy2,nikescrapy3,nikescrapy4,rebook
 import multiprocessing as mp
-from twisted.internet import defer, reactor
+from twisted.internet import defer, reactor,asyncioreactor
+asyncioreactor.install()
+import scrapy
+from scrapy.crawler import CrawlerProcess,CrawlerRunner
 from .PostsView import getPosts
 from typing import Union
 import threading
