@@ -301,7 +301,7 @@ def multiProc(spidy):
 
 
 def startScrapRotation():
-    listSpiders = [adidasscrapy.AdidasscrapySpider]
+    listSpiders = [adidasscrapy.AdidasscrapySpider,rebook.RebookSpider,nikescrapy4.Nikescrapy4Spider,nikescrapy3.Nikescrapy3Spider]
     try:
         with mp.Pool() as pool:
             pool.map(multiProc,listSpiders)
