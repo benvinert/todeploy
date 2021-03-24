@@ -14,8 +14,7 @@ from django.views.decorators.cache import cache_page
 from django.forms.models import model_to_dict
 from mySpiders.moshe.spiders import nikescrapy,adidasscrapy,nikescrapy2,nikescrapy3,nikescrapy4,rebook
 import multiprocessing as mp
-from twisted.internet import defer, reactor,asyncioreactor
-asyncioreactor.install()
+from twisted.internet import defer, reactor
 import scrapy
 from scrapy.crawler import CrawlerProcess,CrawlerRunner
 from .PostsView import getPosts
