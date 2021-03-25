@@ -50,7 +50,9 @@ it's give to customer to see&buy all items in one website instead search between
 ![AdminMessage](https://user-images.githubusercontent.com/64857968/110839008-c8835200-82ab-11eb-9718-ffb667c142a1.png)
 
 
-
+<h1>Branches</h1>
+<h3>deployment - backend code</h3>
+<h3>frontbranch - frontend code</h3>
 <h1>Features</h1>
 <ul>
   <li>JWT</li>
