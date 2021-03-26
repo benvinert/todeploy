@@ -14,6 +14,8 @@ import FilterListIcon from '@material-ui/icons/FilterList';
 import { UserContext } from '../Context/UserContext';
 import AlertMessage from '../Components/AlertMessage';
 import TextField from '@material-ui/core/TextField';
+import CancelIcon from '@material-ui/icons/Cancel';
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 
 
 export default function Shoes()
@@ -267,7 +269,7 @@ export default function Shoes()
         <Grid style={{visibility : checkScreenSize()}} className="GridFilters" item xl={2} md={2} sm={showFilterMenu.doSpaceGrid ? 7 : 1} xs={showFilterMenu.doSpaceGrid ? 7 : 1}>
             <h2>{gender} {style} {cat}</h2>
             <br></br>
-            {showFilterMenu.doSpaceGrid ?<Button variant="outlined" color="primary" onClick={showFilter}> See results</Button> : null}
+            {showFilterMenu.doSpaceGrid ?<Button variant="outlined" color="primary" onClick={showFilter}><CancelIcon/>Close Filters</Button> : null}
             <h3>Filter By Price</h3>
             <h3>Lower than</h3>
             <RadioGroup value={value} onChange={handleChangePrice}>
@@ -322,7 +324,7 @@ export default function Shoes()
             <Container  style={{borderRadius : '0%'}}  component="main" maxWidth="xl">
                 <div className="Top">
                     <AlertMessage showAlert={showAlert}/>
-                    Items <br/><br/>{matches ? <div>Filters<Link><FilterListIcon fontSize="large" onClick={showFilter}/></Link></div> : null}
+                    Items <br/><br/>{matches ? <div>Filters<ArrowRightIcon/><Link><FilterListIcon fontSize="large" onClick={showFilter}/></Link></div> : null}
                 </div>
                 <Grid style={{padding : '15px 15px 15px 15px'}}container spacing={5}>
                     <Item loading={Loading} items={currentPosts} setshowalert={setShowAlert}/>
