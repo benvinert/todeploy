@@ -269,7 +269,7 @@ export default function Shoes()
         <Grid style={{visibility : checkScreenSize()}} className="GridFilters" item xl={2} md={2} sm={showFilterMenu.doSpaceGrid ? 7 : 1} xs={showFilterMenu.doSpaceGrid ? 7 : 1}>
             <h2>{gender} {style} {cat}</h2>
             <br></br>
-            {showFilterMenu.doSpaceGrid ?<Button variant="outlined" color="primary" onClick={showFilter}><CancelIcon/>Close Filters</Button> : null}
+            {showFilterMenu.doSpaceGrid ?<Button variant="contained" color="secondary" onClick={showFilter}><CancelIcon/>Close Filters</Button> : null}
             <h3>Filter By Price</h3>
             <h3>Lower than</h3>
             <RadioGroup value={value} onChange={handleChangePrice}>
