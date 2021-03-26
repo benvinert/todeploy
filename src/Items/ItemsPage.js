@@ -4,11 +4,7 @@ import Container from '@material-ui/core/Container';
 import {useHistory, useParams} from 'react-router-dom';
 import Item from './Item';
 import Pagination from '../Components/Pagination';
-import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
-import CheckBoxIcon from '@material-ui/icons/CheckBox';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import { Link } from 'react-router-dom';
@@ -16,10 +12,7 @@ import Button from '@material-ui/core/Button';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import FilterListIcon from '@material-ui/icons/FilterList';
 import { UserContext } from '../Context/UserContext';
-import Slide from '@material-ui/core/Slide';
-import Snackbar from '@material-ui/core/Snackbar';
 import AlertMessage from '../Components/AlertMessage';
-import { ViewArray } from '@material-ui/icons';
 import TextField from '@material-ui/core/TextField';
 
 
