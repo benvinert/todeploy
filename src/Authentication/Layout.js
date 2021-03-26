@@ -9,8 +9,13 @@ export default function Layout()
 
     const loadUser = async(user_access) => {
       localStorage.setItem("access",user_access)
+<<<<<<< HEAD
       const req = await fetch("https://backend-ben-ecommerce.herokuapp.com/auth/users/me",{
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
+=======
+      const req = await fetch("https://backend-ben-ecommerce.herokuapp.com/auth/users/me/",{
+        method: 'GET', // *GET, POST, PUT, DELETE, etc.
+>>>>>>> f02c41b4b0fdc0e66385156787c70c97041d51b9
         mode: 'cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
         credentials: 'same-origin', // include, *same-origin, omit
@@ -41,7 +46,7 @@ export default function Layout()
           body: JSON.stringify({"token" : token}) }) // body data type must match "Content-Type" header
           .then(resp => resp.status == 200 ? loadUser(token) : console.log("Verify JWT not works FINE :)))))))"))
         }else{
-            console.log("You D'ont have User")
+            console.log("You Don't have User")
         }
     }, [])
 
