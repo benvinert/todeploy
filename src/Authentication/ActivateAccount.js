@@ -35,13 +35,8 @@ export default function ActivateAccount()
 
 
     return <>
-
+    <div align='center'>
     <h1>Account Activated!</h1>
-    <h1>Account Activated!</h1>
-    <h1>Account Activated!</h1>
-    <h1>Account Activated!</h1>
-    <h1>Account Activated!</h1>
-    <h1>Account Activated!</h1>
-    <h1>Account Activated!</h1>
+    </div>
     </>
 }

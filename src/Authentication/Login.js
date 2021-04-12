@@ -15,6 +15,8 @@ import Container from '@material-ui/core/Container';
 import {useForm} from 'react-hook-form';
 import { Alert, AlertTitle } from '@material-ui/lab';
 import {UserContext} from '../Context/UserContext';
+import { useHistory } from 'react-router';
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -53,6 +55,7 @@ export default function SignIn() {
   const { User ,setUser } = useContext(UserContext);
   const classes = useStyles();
   const {handleSubmit,register,errors} = useForm({reValidateMode : "onSubmit"});
+  const { push } = useHistory();
 
 
   // Get User Details from Server
@@ -69,7 +72,7 @@ export default function SignIn() {
       }
     })
     .then((resp) => resp.json())
-    .then((resp_json) => setUser((prevState) => {console.log("USERDE : " , resp_json); return {...prevState,name : resp_json.name,isAuthenticated : true,email : resp_json.email,is_staff : resp_json.is_staff}}))
+    .then((resp_json) => setUser((prevState) => {console.log("USERDE : " , resp_json); setTimeout(() => push("/"),2000); return {...prevState,name : resp_json.name,isAuthenticated : true,email : resp_json.email,is_staff : resp_json.is_staff}}))
     setShow({txt : "Login Succsesfully",status : true,class: "success",})
 
   }
