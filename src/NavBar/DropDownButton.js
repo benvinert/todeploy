@@ -63,6 +63,7 @@ export default function CustomizedMenus() {
   const { User } = useContext(UserContext);
   const { cart } = useContext(CartContext);
   const { push } = useHistory();
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -84,11 +85,6 @@ export default function CustomizedMenus() {
       url: "/likesitems",
       icon: <AccountBoxIcon fontSize="small" />,
       count: likeItems.length,
-    },
-    {
-      title: "Inbox",
-      url: "/likesitems",
-      icon: <InboxIcon fontSize="small" />,
     },
     { title: "Order", url: "/orders", icon: <GrDeliver fontSize="small" /> },
   ];
