@@ -4,11 +4,11 @@ from . import views
 
 urlpatterns = [
     ###################GET ITEMS######################
-    path('All/gender=<str:gender>/category=<str:category>',views.getItemsFromProSide,name="getItemsFromProSide"),
-    path('All/gender=<str:gender>/category=<str:category>/style=<str:param>',views.getItemsFromProSide,name="getItemsFromProSide"),
-    path('All/gender=<str:gender>',views.getItemsFromProSide,name="getItemsFromProSide"),
+    path('All/gender=<str:gender>/category=<str:category>/',views.getItemsFromProSide,name="getItemsFromProSide"),
+    path('All/gender=<str:gender>/category=<str:category>/style=<str:param>/',views.getItemsFromProSide,name="getItemsFromProSide"),
+    path('All/gender=<str:gender>/',views.getItemsFromProSide,name="getItemsFromProSide"),
                 #Kids                     #Boys/Girls                   #Toddler/etc..       #Clothing/Shoes
-    path('All/gender=<str:gender>/kids_gender=<str:kids_gender>/style=<str:param>/category=<str:category>',views.getItemsFromProSide,name="getItemsFromProSide"),
+    path('All/gender=<str:gender>/kids_gender=<str:kids_gender>/style=<str:param>/category=<str:category>/',views.getItemsFromProSide,name="getItemsFromProSide"),
     path('All/searchItem/params=<str:params>',views.searchItem,name="search"),
     path('All/getItemById/product_code=<str:product_code>',views.getItemById,name="getitembyid"),
     ##################################################
