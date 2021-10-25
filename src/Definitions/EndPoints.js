@@ -5,7 +5,7 @@ export const PREFIX_PATH = "api/All/";
 export const FIRST_PAGE = 1;
 export const USER_DATA = {
   GET_USER_DATA: "auth/users/me",
-  REGISTER_USER: "auth/users",
+  REGISTER_USER: "auth/users/",
 };
 
 export const ITEMS_URLS = {
