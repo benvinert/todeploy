@@ -17,7 +17,7 @@ import os
 
 
 
-
+APPEND_SLASH = False
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
