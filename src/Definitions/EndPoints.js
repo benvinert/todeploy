@@ -29,8 +29,8 @@ export const AUTHORIZATION = {
 };
 
 export const ADMIN_URLS = {
-  SEND_EMAIL: "api/Admin/sendEmail/",
-  GET_ALL_USERS: "api/Admin/getAllUsers/",
+  SEND_EMAIL: "api/Admin/sendEmail",
+  GET_ALL_USERS: "api/Admin/getAllUsers",
 };
 
 export const ORDERS_URLS = {
